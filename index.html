@@ -2,19 +2,43 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>欢迎来到我的个人网站</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>三栏页面</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .text {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <img src="me.jpg" alt="我的头像" class="avatar" />
-    <h1>你好，我是 SDS5230</h1>
-    <p>这是我第一个上线的个人网站，欢迎参观！</p>
-
-    <div class="buttons">
-      <a href="about.html" class="button">关于我</a>
-      <a href="mailto:you@example.com" class="button">联系我</a>
-    </div>
+    <img src="left.jpg" alt="左图" />
+    <div class="text">欢迎来到我的网站</div>
+    <img src="right.jpg" alt="右图" />
   </div>
 </body>
 </html>
