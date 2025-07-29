@@ -21,23 +21,23 @@
 
     .container {
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* 纵向排列：文字在上，图片在下 */
       align-items: center;
-      gap: 5vw;
+      gap: 3vw;
       padding: 5vw;
       max-width: 100%;
     }
 
     .container img {
-      width: 60vw;
-      max-width: 120%;
+      width: 90vw;
+      max-width: 100%;
       height: auto;
       border-radius: 1.5vw;
       box-shadow: 0 0 1vw rgba(0, 0, 0, 0.2);
     }
 
     .text {
-      max-width: 100vw;
+      max-width: 90vw;
       font-size: clamp(20px, 2.5vw, 30px);
       font-weight: 600;
       color: #222;
@@ -77,26 +77,10 @@
     .copy-btn:active {
       background-color: #005dc1;
     }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .container img {
-        width: 90vw;
-      }
-
-      .copy-btn {
-        font-size: 20px;
-        padding: 16px 32px;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="left.jpg" alt="左图" />
     <div class="text">
       <div class="title">老九門娱乐欢迎你</div><br>
       加拿大28、极速赛车、澳洲、时时彩、PC蛋蛋<br>
@@ -109,6 +93,8 @@
       接待_微信号：<strong id="wechat">1340046</strong><br>
       <button class="copy-btn" onclick="copyWechat()">复制微信号</button>
     </div>
+
+    <img src="left.jpg" alt="宣传图" />
   </div>
 
   <script>
