@@ -39,7 +39,7 @@
 
     .text {
       max-width: 90vw;
-      font-size: clamp(16px, 2vw, 26px);
+      font-size: clamp(18px, 2.5vw, 28px);
       font-weight: 600;
       color: #222;
       line-height: 1.8;
@@ -47,8 +47,8 @@
     }
 
     .title {
-      font-size: clamp(24px, 4vw, 36px);
-      color: #FFD700;
+      font-size: clamp(26px, 4vw, 40px);
+      color: #d10000;
       font-weight: 900;
       margin-bottom: 1em;
     }
@@ -56,11 +56,26 @@
     .text a {
       color: #0066cc;
       text-decoration: none;
-      word-break: break-all;
+      word-break: break-word;
     }
 
     .text a:hover {
       text-decoration: underline;
+    }
+
+    .copy-btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .copy-btn:active {
+      background-color: #005dc1;
     }
 
     @media (max-width: 768px) {
@@ -69,7 +84,12 @@
       }
 
       .container img {
-        width: 80vw;
+        width: 90vw;
+      }
+
+      .copy-btn {
+        font-size: 20px;
+        padding: 16px 32px;
       }
     }
   </style>
@@ -86,8 +106,20 @@
       苹果：<a href="https://www.mj98.app/" target="_blank">https://www.mj98.app/</a><br>
       计划网：<a href="https://www.ljmen28.co/" target="_blank">https://www.ljmen28.co/</a><br><br>
       点击即可跳转<br><br>
-      接待微信号：<strong>1340046</strong>
+      接待微信号：<strong id="wechat">1340046</strong><br>
+      <button class="copy-btn" onclick="copyWechat()">复制微信号</button>
     </div>
   </div>
+
+  <script>
+    function copyWechat() {
+      const wechat = document.getElementById("wechat").innerText;
+      navigator.clipboard.writeText(wechat).then(() => {
+        alert("微信号已复制：" + wechat);
+      }).catch(err => {
+        alert("复制失败，请手动复制");
+      });
+    }
+  </script>
 </body>
 </html>
