@@ -4,38 +4,53 @@
   <meta charset="UTF-8" />
   <title>老九門娱乐</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 0;
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
     }
 
     .container {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
-      gap: 40px;
-      text-align: center;
-      padding: 20px;
+      gap: 5vw;
+      padding: 5vw;
+      max-width: 100%;
     }
 
     .container img {
-      width: 30vw;
+      width: 40vw;
       max-width: 100%;
       height: auto;
-      border-radius: 16px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 1.5vw;
+      box-shadow: 0 0 1vw rgba(0, 0, 0, 0.2);
     }
 
     .text {
-      max-width: 320px;
-      font-size: 20px;
-      font-weight: bold;
+      max-width: 90vw;
+      font-size: clamp(16px, 2vw, 26px);
+      font-weight: 600;
       color: #222;
       line-height: 1.8;
+      text-align: center;
+    }
+
+    .title {
+      font-size: clamp(24px, 4vw, 36px);
+      color: #d10000;
+      font-weight: 900;
+      margin-bottom: 1em;
     }
 
     .text a {
@@ -48,27 +63,29 @@
       text-decoration: underline;
     }
 
-    .title {
-  font-size: 50px;
-  color: #FFD700; /* 红色，可改成其他颜色 */
-  font-weight: 900; 
-}
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
 
+      .container img {
+        width: 80vw;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="left.jpg" alt="左图" />
-<div class="text">
-  <div class="title">老九門娱乐欢迎你</div><br>
-  名爵下载链接<br>
-  安卓：<a href="https://www.mj98.vip/" target="_blank">https://www.mj98.vip/</a><br>
-  苹果：<a href="https://www.mj98.app/" target="_blank">https://www.mj98.app/</a><br>
-  计划网：<a href="https://www.ljmen28.co/" target="_blank">https://www.ljmen28.co/</a><br><br>
-  点击即可跳转<br><br>
-  接待微信号：<strong>1340046</strong>
-</div>
-
+    <div class="text">
+      <div class="title">老九門娱乐</div>
+      <div class="title">欢迎你</div>
+      名爵下载链接<br>
+      安卓：<a href="https://www.mj98.vip/" target="_blank">https://www.mj98.vip/</a><br>
+      苹果：<a href="https://www.mj98.app/" target="_blank">https://www.mj98.app/</a><br>
+      计划网：<a href="https://www.ljmen28.co/" target="_blank">https://www.ljmen28.co/</a><br><br>
+      点击即可跳转<br><br>
+      接待微信号：<strong>1340046</strong>
     </div>
   </div>
 </body>
