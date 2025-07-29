@@ -17,30 +17,44 @@
     .container {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 50px;
+      text-align: center;
     }
 
     .container img {
-      width: 750px;
-      height: 750px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
 
     .text {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: bold;
-      color: #333;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .text a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .text a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <img src="left.jpg" alt="左图" />
-    <div class="text">老九門娱乐欢迎你</div>
-    <div class="text">名爵下载链接</div>
-     <div class="text">安卓：https://www.mj98.vip/</div>
-     <div class="text">苹果：https://www.mj98.app/</div>
+    <div class="text">
+      老九門娱乐欢迎你<br>
+      名爵下载链接<br>
+      安卓：<a href="https://www.mj98.vip/" target="_blank">https://www.mj98.vip/</a><br>
+      苹果：<a href="https://www.mj98.app/" target="_blank">https://www.mj98.app/</a>
+    </div>
     <img src="right.jpg" alt="右图" />
   </div>
 </body>
